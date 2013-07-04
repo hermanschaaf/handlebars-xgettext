@@ -12,8 +12,8 @@ exports.parser = function (test) {
   var result = parser.parse(template);
 
   test.equal(typeof result, 'object', 'No object returned');
-  test.equal(Object.keys(result).length, 5, 'Invalid amount of strings returned');
-  test.equal(result['Image description'].length, 2, 'Invalid amount of lines returned for string');
+  test.equal(Object.keys(result).length, 6, 'Invalid amount of strings returned');
+  test.equal(result['Image description'].lines.length, 2, 'Invalid amount of lines returned for string');
 
   test.done();
 };
